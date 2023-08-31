@@ -16,40 +16,38 @@ def linear_search(mylist, key):
 
 
 def binary_search(mylist, key):
-	""" done. """
+  
 	return _binary_search(mylist, key, 0, len(mylist)-1)
 
 def _binary_search(mylist, key, left, right):
-	"""
-	Recursive implementation of binary search.
-
-	Params:
-	  mylist....list to search
-	  key.......search key
-	  left......left index into list to search
-	  right.....right index into list to search
-
-	Returns:
-	  index of key in mylist, or -1 if not present.
-	"""
 	### TODO
+  if left > right:
+    return -1  # Target not found
 
+  mid = (left + right) // 2
+
+  if mylist[mid] == key:
+    return mid
+  elif mylist[mid] < key:
+    return _binary_search(mylist, key, mid + 1, right)
+  else:
+    return _binary_search(mylist, key, left, mid - 1)
 	###
 
 
 
 
 def time_search(search_fn, mylist, key):
-	"""
-	Return the number of milliseconds to run this
-	search function on this list.
-
-	Note 1: `sort_fn` parameter is a function.
-	Note 2: time.time() returns the current time in seconds. 
-	You'll have to multiple by 1000 to get milliseconds.
+  """
+  Return the number of milliseconds to run this
+  search function on this list.
+  
+  Note 1: `search_fn_fn` parameter is a function.
+  Note 2: time.time() returns the current time in seconds. 
+  You'll have to multiple by 1000 to get milliseconds.
 
 	Params:
-	  sort_fn.....the search function
+	  search_fn.....the search function
 	  mylist......the list to search
 	  key.........the search key 
 
@@ -58,6 +56,10 @@ def time_search(search_fn, mylist, key):
 	  search function on this input.
 	"""
 	### TODO
+  time1 = (time.time() * 1000)
+  search_fn(mylist, key)
+  time2 = (time.time() * 1000)
+  return time2 - time1
 
 	###
 
@@ -77,7 +79,7 @@ def compare_search(sizes=[1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7]):
 	  for each method to run on each value of n
 	"""
 	### TODO
-
+  
 	###
 
 def print_results(results):

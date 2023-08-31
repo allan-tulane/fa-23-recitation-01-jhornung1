@@ -40,11 +40,11 @@ We'll compare the running times of `linear_search` and `binary_search` empirical
 
 - [ ] 4. Describe the worst case input value of `key` for `linear_search`? for `binary_search`? 
 
-**TODO: your answer goes here**
+**TODO: The worst possible case for the input value 'key' for the linear search would be whatever the final value would be in the list. Example would be in mylist = [1,2,3,4,5,6], worst case for key would be 6. On the other hand, for a binary search, the worst case either be the first or the last value in the list.**
 
 - [ ] 5. Describe the best case input value of `key` for `linear_search`? for `binary_search`? 
 
-**TODO: your answer goes here**
+**TODO: Best case for a linear search would be the first value in the list, and best case for a binary search would be the exact middle value of a list**
 
 - [ ] 6. Complete the `time_search` function to compute the running time of a search function. Note that this is an example of a "higher order" function, since one of its parameters is another function.
 
