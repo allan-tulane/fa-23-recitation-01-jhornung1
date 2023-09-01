@@ -80,7 +80,6 @@ def compare_search(sizes=[1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7]):
   """
   ### TODO
   results = []
-  results = []
   for size in sizes:
     n = int(size)
     arr = list(range(n))
@@ -90,9 +89,12 @@ def compare_search(sizes=[1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7]):
     binary_time = time_search(binary_search, arr, key)
         
     results.append((n, linear_time, binary_time))
-    
+
   return results
   ###
+
+def wtf():
+  print(1)
 
 def print_results(results):
 	""" done """
