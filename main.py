@@ -68,7 +68,7 @@ def compare_search(sizes=[1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7]):
   Compare the running time of linear_search and binary_search
   for input sizes as given. The key for each search should be
   -1. The list to search for each size contains the numbers from 0 to n-1,
-  sorted in ascending order. 
+  sorted in ascending order. print_results(compare_search())
   
   You'll use the time_search function to time each call.
 
@@ -103,3 +103,5 @@ def print_results(results):
 							floatfmt=".3f",
 							tablefmt="github"))
 
+# TO GET TIMING INFORMATION
+print_results(compare_search())
